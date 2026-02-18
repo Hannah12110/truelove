@@ -163,7 +163,7 @@ export default function ResultPage() {
                 {/* 左侧：雷达图 */}
                 <div className="w-full md:w-1/2 flex-shrink-0">
                   <ResponsiveContainer width="100%" height={320}>
-                    <RadarChart data={radarData} margin={{ top: 20, right: 40, bottom: 20, left: 40 }}>
+                    <RadarChart data={radarData} margin={{ top: 30, right: 50, bottom: 30, left: 50 }}>
                       <PolarGrid stroke="hsl(var(--border))" strokeOpacity={0.3} />
                       <PolarAngleAxis
                         dataKey="dimension"
