@@ -162,14 +162,14 @@ export default function ResultPage() {
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 {/* 左侧：雷达图 */}
                 <div className="w-full md:w-1/2 flex-shrink-0">
-                  <ResponsiveContainer width="100%" height={320}>
-                    <RadarChart data={radarData} margin={{ top: 30, right: 50, bottom: 30, left: 50 }}>
+                  <ResponsiveContainer width="100%" height={340}>
+                    <RadarChart data={radarData} margin={{ top: 40, right: 60, bottom: 40, left: 60 }}>
                       <PolarGrid stroke="hsl(var(--border))" strokeOpacity={0.3} />
                       <PolarAngleAxis
                         dataKey="dimension"
                         tick={{ 
                           fill: 'hsl(var(--foreground))', 
-                          fontSize: 11, 
+                          fontSize: 10, 
                           fontWeight: 500 
                         }}
                       />
