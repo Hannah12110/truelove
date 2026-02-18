@@ -163,11 +163,15 @@ export default function ResultPage() {
                 {/* 左侧：雷达图 */}
                 <div className="w-full md:w-1/2 flex-shrink-0">
                   <ResponsiveContainer width="100%" height={320}>
-                    <RadarChart data={radarData}>
+                    <RadarChart data={radarData} margin={{ top: 20, right: 40, bottom: 20, left: 40 }}>
                       <PolarGrid stroke="hsl(var(--border))" strokeOpacity={0.3} />
                       <PolarAngleAxis
                         dataKey="dimension"
-                        tick={{ fill: 'hsl(var(--foreground))', fontSize: 12, fontWeight: 500 }}
+                        tick={{ 
+                          fill: 'hsl(var(--foreground))', 
+                          fontSize: 11, 
+                          fontWeight: 500 
+                        }}
                       />
                       <Radar
                         name="倾向性"
