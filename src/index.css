@@ -1,0 +1,115 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    --background: 6 100% 97%;
+    --foreground: 0 0% 20%;
+    --card: 340 100% 98%;
+    --card-foreground: 0 0% 20%;
+    --popover: 340 100% 98%;
+    --popover-foreground: 0 0% 20%;
+    --primary: 343 77% 57%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 351 100% 86%;
+    --secondary-foreground: 343 77% 30%;
+    --muted: 340 30% 94%;
+    --muted-foreground: 0 0% 50%;
+    --accent: 340 100% 95%;
+    --accent-foreground: 343 77% 40%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 340 40% 90%;
+    --input: 340 40% 90%;
+    --ring: 343 77% 57%;
+    --chart-1: 343 77% 57%;
+    --chart-2: 351 100% 75%;
+    --chart-3: 280 70% 75%;
+    --chart-4: 200 70% 75%;
+    --chart-5: 51 100% 70%;
+    --sidebar-background: 340 100% 98%;
+    --sidebar-foreground: 0 0% 30%;
+    --sidebar-primary: 343 77% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 100% 95%;
+    --sidebar-accent-foreground: 343 77% 40%;
+    --sidebar-border: 340 40% 90%;
+    --sidebar-ring: 343 77% 57%;
+    --gold: 51 100% 50%;
+  }
+
+  .dark {
+    --background: 343 30% 12%;
+    --foreground: 340 100% 95%;
+    --card: 343 25% 15%;
+    --card-foreground: 340 100% 95%;
+    --popover: 343 25% 15%;
+    --popover-foreground: 340 100% 95%;
+    --primary: 343 77% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 343 40% 25%;
+    --secondary-foreground: 340 100% 90%;
+    --muted: 343 20% 20%;
+    --muted-foreground: 340 30% 70%;
+    --accent: 343 30% 18%;
+    --accent-foreground: 340 100% 90%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 343 20% 25%;
+    --input: 343 20% 25%;
+    --ring: 343 77% 65%;
+    --chart-1: 343 77% 65%;
+    --chart-2: 351 80% 70%;
+    --chart-3: 280 60% 70%;
+    --chart-4: 200 60% 70%;
+    --chart-5: 51 90% 60%;
+    --sidebar-background: 343 25% 15%;
+    --sidebar-foreground: 340 100% 90%;
+    --sidebar-primary: 343 77% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 343 30% 20%;
+    --sidebar-accent-foreground: 340 100% 90%;
+    --sidebar-border: 343 20% 25%;
+    --sidebar-ring: 343 77% 65%;
+    --gold: 51 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(180deg, hsl(var(--background)), hsl(var(--accent)));
+  }
+  
+  .shadow-dreamy {
+    box-shadow: 0 8px 32px rgba(230, 60, 110, 0.15);
+  }
+  
+  .shadow-soft {
+    box-shadow: 0 4px 16px rgba(230, 60, 110, 0.1);
+  }
+}
